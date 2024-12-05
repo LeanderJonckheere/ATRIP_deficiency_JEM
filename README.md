@@ -1,7 +1,7 @@
 # ATRIP_deficiency_JEM
 
-The provided code for creation of the figures starts from the from the 
-preprocessed seurat objects, which have been processed according to the Seurat 
+The provided code for creation of the figures begins from the 
+preprocessed Seurat objects, which have been processed according to the Seurat 
 v5 workflow, starting from the count matrices. Seurat is an R package designed 
 for QC, analysis, and exploration of single-cell RNA-seq and multi-omics data, 
 developed by Satijalab. Seurat aims to enable users to identify and interpret 
