@@ -16,22 +16,25 @@ library(DALI)
 
 ####Load data####
 
-#CITE-seq
-ATRIP <- readRDS("ATRIP_18062024.rds")
+##CITE-seq: all PBMCs
+ATRIP <- readRDS("ATRIP_merge_18062024.rds")
 metadata <- ATRIP@meta.data
 
-#TCR-seq
+##CITE-seq & TCR-seq: only T cells
 LBA001_LBA002_T_reclustered <- readRDS("LBA001_LBA002_T_reclustered.rds")
+metadata_TCR <- LBA001_LBA002_T_reclustered@meta.data
+
+#T-cells split by sample
 ATRIP_T_reclustered <- readRDS("ATRIP_T_reclustered.rds")
 HC1_T_reclustered <- readRDS("HC1_T_reclustered.rds")
 HC2_T_reclustered <- readRDS("HC2_T_reclustered.rds")
 HC3_T_reclustered <- readRDS("HC3_T_reclustered.rds")
 
+#CD8 TEM split by sample
 CD8_TEM_all_patients <- readRDS("CD8_TEM_all_patients.rds")
 CD8_TEM_ATRIP <- readRDS("CD8_TEM_ATRIP.rds")
 CD8_TEM_HC1 <- readRDS("CD8_TEM_HC1.rds")
 CD8_TEM_HC2 <- readRDS("CD8_TEM_HC2.rds")
-CD8_TEM_HC3 <- readRDS("CD8_TEM_HC3.rds")
 
 ####Set colours####
 annotation_cols <-
